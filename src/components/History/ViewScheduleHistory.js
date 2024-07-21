@@ -1,0 +1,52 @@
+// src/components/History/ViewScheduleHistory.js
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import '../../App.css';
+import './HistoryTableStyles.css';
+
+const ViewScheduleHistory = ({ onBack }) => {
+  const [records, setRecords] = useState([]);
+
+  useEffect(() => {
+    const fetchRecords = async () => {
+      try {
+        const response = await axios.get('/history/schedule');
+        setRecords(response.data);
+      } catch (error) {
+        console.error('Error fetching schedule records', error);
+      }
+    };
+
+    fetchRecords();
+  }, []);
+
+  return (
+    <div className="container">
+      <button className="back-button" onClick={onBack}>Back</button>
+      <h2>Schedule History</h2>
+      <div className="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Activity</th>
+            </tr>
+          </thead>
+          <tbody>
+            {records.map((record) => (
+              <tr key={record.id}>
+                <td>{record.date.split('T')[0]}</td>
+                <td>{record.date.split('T')[1].slice(0, 5)}</td>
+                <td>{record.activity}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default ViewScheduleHistory;
+
