@@ -1,4 +1,3 @@
-// src/components/Schedule/ScheduleRecords.js
 import React, { useState } from 'react';
 import AddScheduleRecord from './AddScheduleRecord';
 import ViewScheduleRecords from './ViewScheduleRecords';
