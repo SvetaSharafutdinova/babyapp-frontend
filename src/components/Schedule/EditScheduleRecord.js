@@ -1,4 +1,3 @@
-// src/components/Schedule/EditScheduleRecord.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../App.css';
@@ -14,8 +13,8 @@ const EditScheduleRecord = ({ recordId, onRecordUpdated, initialData }) => {
     if (initialData) {
       const [recordDate, recordTime] = initialData.date.split('T');
       setDate(recordDate);
-      setTime(recordTime.slice(0, 5)); // Only HH:MM
-      setActivity(initialData.activity);
+      setTime(recordTime.slice(0, 5))
+      setActivity(initialData.activity); 
     }
   }, [initialData]);
 
