@@ -1,4 +1,3 @@
-// src/components/Feeding/FeedingRecords.js
 import React, { useState } from 'react';
 import AddFeedingRecord from './AddFeedingRecord';
 import ViewFeedingRecords from './ViewFeedingRecords';

@@ -1,4 +1,3 @@
-// src/components/Condition/ViewConditionRecords.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import EditConditionRecord from './EditConditionRecord';

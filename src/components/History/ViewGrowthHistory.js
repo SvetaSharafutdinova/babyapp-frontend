@@ -1,4 +1,3 @@
-// src/components/History/ViewGrowthHistory.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../App.css';

@@ -1,4 +1,3 @@
-// src/components/Condition/ConditionRecords.js
 import React, { useState } from 'react';
 import AddConditionRecord from './AddConditionRecord';
 import ViewConditionRecords from './ViewConditionRecords';

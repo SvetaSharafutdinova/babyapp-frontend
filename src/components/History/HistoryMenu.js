@@ -1,4 +1,3 @@
-// src/components/History/HistoryMenu.js
 import React from 'react';
 import '../../App.css';
 

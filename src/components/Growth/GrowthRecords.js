@@ -1,4 +1,3 @@
-// src/components/Growth/GrowthRecords.js
 import React, { useState } from 'react';
 import AddGrowthRecord from './AddGrowthRecord';
 import ViewGrowthRecords from './ViewGrowthRecords';

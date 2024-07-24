@@ -1,4 +1,3 @@
-// src/components/Growth/EditGrowthRecord.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../../App.css';
@@ -15,7 +14,7 @@ const EditGrowthRecord = ({ recordId, onRecordUpdated, initialData }) => {
     if (initialData) {
       const [recordDate, recordTime] = initialData.date.split('T');
       setDate(recordDate);
-      setTime(recordTime.slice(0, 5)); // Only HH:MM
+      setTime(recordTime.slice(0, 5)); 
       setHeight(initialData.height);
       setWeight(initialData.weight);
     }
